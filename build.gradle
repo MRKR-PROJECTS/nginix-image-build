@@ -20,6 +20,6 @@ def test(){
 
 def dockerBuild() {
     exec {
-        commandLine 'docker' , 'build', '-t', 'ngnix', 'build'
+        commandLine 'docker' , 'build', '.', '-t', 'ngnix'
     }
 }
