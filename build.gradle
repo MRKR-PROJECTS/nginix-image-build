@@ -1,0 +1,10 @@
+tasks.register('build_image') {
+    group = 'build'
+    dockerBuild()
+}
+
+def dockerBuild() {
+    exec {
+        commandLine 'docker' , 'build', '-t', 'nginix', 'build'
+    }
+}
